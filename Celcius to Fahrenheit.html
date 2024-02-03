@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>celciusTofarenheight</title>
+</head>
+<body>
+    <script>
+        function celciusTofarenheight(celcius) {
+            const Fahrenheit =( celcius *9/5)+32; // 1 inch = 0.0254 meters
+            return Fahrenheit.toFixed(2); // Round to 2 decimal places
+        }
+        
+        // Prompt user for inches
+        const celcius = parseFloat(prompt("Enter the temperatur in celcius:"));
+        
+        // Check if the input is valid
+       
+            const Fahrenheit = celciusTofarenheight(celcius);
+            alert(`${celcius} degree is equal to ${Fahrenheit} degree.`);
+        
+    </script>
+</body>
+</html>

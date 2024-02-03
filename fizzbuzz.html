@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Function to perform FizzBuzz up to a specified number
+function fizzBuzz(limit) {
+    let output = "";
+    for (let i = 1; i <= limit; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            output += "FizzBuzz\n";
+        } else if (i % 3 === 0) {
+            output += "Fizz\n";
+        } else if (i % 5 === 0) {
+            output += "Buzz\n";
+        } else {
+            output += i + "\n";
+        }
+    }
+    return output;
+}
+
+// Prompt user for the limit
+const limit = parseInt(prompt("Enter the limit for FizzBuzz:"));
+
+// Check if the input is valid
+if (!isNaN(limit) && limit > 0) {
+    const result = fizzBuzz(limit);
+    alert(result);
+} else {
+    alert("Invalid input. Please enter a positive integer as the limit.");
+}
+
+    </script>
+</body>
+</html>

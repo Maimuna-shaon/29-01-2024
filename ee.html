@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USD TO BDT</title>
+</head>
+<body>
+    <script>
+        // Function to convert USD to BDT
+function usdToBdtConverter(amountInUSD) {
+    const exchangeRate = 100; // Replace with the current exchange rate
+    const amountInBDT = amountInUSD * exchangeRate;
+    return amountInBDT.toFixed(2); // Round to 2 decimal places
+}
+
+// Prompt user for USD amount
+const usdAmount = prompt("Enter the amount in US dollars (USD):");
+
+// Check if the input is valid
+if (usdAmount !== null && !isNaN(usdAmount) && usdAmount !== "") {
+    const convertedAmount = usdToBdtConverter(parseFloat(usdAmount));
+    alert(`Equivalent amount in Bangladeshi Taka (BDT) is: ${convertedAmount}`);
+} else {
+    alert("Invalid input. Please enter a valid number.");
+}
+
+    </script>
+</body>
+</html>

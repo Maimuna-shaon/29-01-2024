@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inch to Meter</title>
+</head>
+<body>
+    <script>
+        // Function to convert inches to meters
+function inchesToMetersConverter(inches) {
+    const meters = inches * 0.0254; // 1 inch = 0.0254 meters
+    return meters.toFixed(2); // Round to 2 decimal places
+}
+
+// Prompt user for inches
+const inches = parseFloat(prompt("Enter the length in inches:"));
+
+// Check if the input is valid
+if (!isNaN(inches) && inches >= 0) {
+    const meters = inchesToMetersConverter(inches);
+    alert(`${inches} inches is equal to ${meters} meters.`);
+} else {
+    alert("Invalid input. Please enter a valid length in inches.");
+}
+
+    </script>
+</body>
+</html>

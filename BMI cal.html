@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>BMI CALCULATOR</title>
+</head>
+<body>
+    <script>
+        // Function to calculate BMI
+function calculateBMI(weight, height) {
+    // Convert height from cm to meters
+    height /= 100;
+    // Calculate BMI
+    const bmi = weight / (height * height);
+    return bmi.toFixed(2); // Round to 2 decimal places
+}
+
+// Prompt user for weight and height
+const weight = parseFloat(prompt("Enter your weight in kilograms (kg):"));
+const height = parseFloat(prompt("Enter your height in centimeters (cm):"));
+
+// Check if the input is valid
+if (!isNaN(weight) && !isNaN(height) && weight > 0 && height > 0) {
+    const bmi = calculateBMI(weight, height);
+    let bmiCategory;
+
+    // Determine BMI category
+    if (bmi < 18.5) {
+        bmiCategory = "Underweight";
+    } else if (bmi >= 18.5 && bmi < 25) {
+        bmiCategory = "Normal weight";
+    } else if (bmi >= 25 && bmi < 30) {
+        bmiCategory = "Overweight";
+    } else {
+        bmiCategory = "Obese";
+    }
+
+    alert(`Your BMI is: ${bmi}\n\nBMI Category: ${bmiCategory}`);
+} else {
+    alert("Invalid input. Please enter valid weight and height.");
+}
+
+    </script>
+</body>
+</html>
